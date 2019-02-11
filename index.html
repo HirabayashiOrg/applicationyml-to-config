@@ -13,12 +13,20 @@
     <div class="row">
         <div class="col-6">
             <h5>application.yml</h5>
-            <textarea rows="10" class="form-control"></textarea>
+            <textarea rows="20" class="form-control" id="target"></textarea>
         </div>
         <div class="col-6">
             <h5>config</h5>
-            <textarea rows="10" class="form-control"></textarea>
+            <textarea rows="20" class="form-control" id="result"></textarea>
         </div>
     </div>
 </body>
+<script>
+    $(function() {
+        $('#target').keyup(function() {
+            let yaml = $('#target').text();
+            $('#result').text(yaml);
+        });
+    });
+</script>
 </html>
